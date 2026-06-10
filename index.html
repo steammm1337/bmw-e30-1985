@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW E30 1985 White - Легенда</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Hero Section with 3D Model -->
+    <section id="hero" class="hero-section">
+        <canvas id="canvas3d"></canvas>
+
+        <!-- Video Overlay (hidden by default) -->
+        <video id="video-overlay" class="video-overlay" muted playsinline>
+            <source src="/kling_20260610_作品__4282_0.mp4" type="video/mp4">
+        </video>
+
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="bmw-blue">BMW</span> E30
+            </h1>
+            <p class="hero-subtitle">1985 • White Legend</p>
+            <div class="scroll-indicator">
+                <span>Прокрути</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 5v14m0 0l7-7m-7 7l-7-7" stroke="currentColor" stroke-width="2"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section id="info" class="info-section">
+        <div class="container">
+            <div class="info-grid">
+                <!-- Technical Specs -->
+                <div class="info-card">
+                    <h2 class="card-title">Технические характеристики</h2>
+                    <div class="specs-list">
+                        <div class="spec-item">
+                            <span class="spec-label">Двигатель</span>
+                            <span class="spec-value">M20B20 (2.0L I6)</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Мощность</span>
+                            <span class="spec-value">125 л.с.</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Крутящий момент</span>
+                            <span class="spec-value">164 Нм</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">0-100 км/ч</span>
+                            <span class="spec-value">10.5 сек</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Макс. скорость</span>
+                            <span class="spec-value">195 км/ч</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Трансмиссия</span>
+                            <span class="spec-value">5-МКПП</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Привод</span>
+                            <span class="spec-value">Задний</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Масса</span>
+                            <span class="spec-value">1080 кг</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- History -->
+                <div class="info-card">
+                    <h2 class="card-title">История модели</h2>
+                    <div class="history-content">
+                        <p>BMW E30 — второе поколение легендарной 3-й серии, выпускавшееся с 1982 по 1994 год. Этот автомобиль стал символом эпохи и одной из самых культовых моделей в истории BMW.</p>
+
+                        <p>E30 завоевал сердца автолюбителей благодаря идеальному балансу между управляемостью, надежностью и элегантным дизайном. Его задний привод и почти идеальная развесовка 50/50 сделали его любимцем энтузиастов дрифта и трековых гонок.</p>
+
+                        <p>Белая версия 1985 года особенно ценится коллекционерами. Это был пик производства E30, когда BMW усовершенствовала все системы и добилась максимальной надежности.</p>
+
+                        <p>Сегодня E30 — это не просто автомобиль, это икона автомобильной культуры, символ качества немецкого автопрома и объект желания для миллионов поклонников по всему миру.</p>
+                    </div>
+                </div>
+
+                <!-- Culture Impact -->
+                <div class="info-card full-width">
+                    <h2 class="card-title">Культурное значение</h2>
+                    <div class="culture-grid">
+                        <div class="culture-item">
+                            <div class="culture-icon">🏁</div>
+                            <h3>Дрифт культура</h3>
+                            <p>E30 стал одной из самых популярных платформ для дрифта благодаря заднему приводу и отличной управляемости.</p>
+                        </div>
+                        <div class="culture-item">
+                            <div class="culture-icon">🎬</div>
+                            <h3>Кино и медиа</h3>
+                            <p>Появлялся в десятках фильмов и сериалов как символ немецкого качества и стиля 80-х.</p>
+                        </div>
+                        <div class="culture-item">
+                            <div class="culture-icon">🔧</div>
+                            <h3>Тюнинг сцена</h3>
+                            <p>Огромное сообщество энтузиастов создало бесчисленные модификации — от стока до 500+ л.с.</p>
+                        </div>
+                        <div class="culture-item">
+                            <div class="culture-icon">💎</div>
+                            <h3>Коллекционная ценность</h3>
+                            <p>Чистые экземпляры растут в цене каждый год, особенно M3 и белые версии.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
