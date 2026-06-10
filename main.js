@@ -35,6 +35,7 @@ controls.enableDamping = true;
 controls.dampingFactor = 0.05;
 controls.enableZoom = true;
 controls.enablePan = false;
+controls.enableRotate = false; // DISABLE rotation - scroll controls it
 controls.minDistance = 4;
 controls.maxDistance = 15;
 controls.maxPolarAngle = Math.PI / 2 + 0.2;
@@ -153,14 +154,18 @@ const ROTATION_RANGE = Math.PI * 2; // 360 degrees
 
 function updateScroll() {
     const heroSection = document.querySelector('.hero-section');
+    if (!heroSection) return;
+
     const heroHeight = heroSection.offsetHeight;
     const scrollTop = window.scrollY;
 
     // Calculate scroll progress (0 to 1)
-    scrollProgress = Math.min(scrollTop / (heroHeight - window.innerHeight), 1);
+    scrollProgress = Math.max(0, Math.min(scrollTop / heroHeight, 1));
 
     // Map scroll to rotation
     targetRotation = scrollProgress * ROTATION_RANGE;
+
+    console.log('Scroll:', scrollTop, 'Progress:', scrollProgress.toFixed(2), 'Rotation:', (targetRotation * 180 / Math.PI).toFixed(0) + '°');
 }
 
 // Video transition logic
