@@ -98,7 +98,7 @@ scene.add(carGroup);
 
 const loader = new GLTFLoader();
 loader.load(
-    '/low_poly_car_-_bmw_e30_1985_white.glb',
+    './low_poly_car_-_bmw_e30_1985_white.glb',
     (gltf) => {
         car = gltf.scene;
 
